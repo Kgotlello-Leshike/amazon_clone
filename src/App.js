@@ -9,6 +9,7 @@ import Header from "./components/Layout/Header";
 import ProductDetails from "./components/ProductDetails";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
+import PaymentSuccessful from "./components/PaymentSuccessful";
 import ShoppingContext from "./Conext/shopping/shoppingContext";
 import { auth } from "./Firebase"
 import Checkout from "./components/Checkout";
@@ -63,6 +64,9 @@ auth.onAuthStateChanged((authUser) => {
         </Route>
         <Route path="*">
           <NotFound />
+        </Route>
+        <Route path="/paymentSuccessful">
+          <PaymentSuccessful />
         </Route>
       
       </Switch>
